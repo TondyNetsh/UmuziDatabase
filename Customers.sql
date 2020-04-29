@@ -33,7 +33,7 @@ WHERE CustomerID = 1;
 /* Query for updating record where customerID is 1 */
 UPDATE customers 
 SET FirstName = "Lerato", LastName = "Mabitso" 
-WHERE CustomerID = 1
+WHERE CustomerID = 1;
 
 /* Query for deleting record from customer table */ 
 DELETE FROM customers WHERE CustomerID = 2;
@@ -44,9 +44,19 @@ SELECT * FROM customers;
 /* Query for selecting records only from the name column in the customers table */
 SELECT FirstName FROM customers;
 
+/* Select all customers from the “Customers” table, 
+sorted by the “Country” column. */
+SELECT * FROM customers ORDER BY Country;
 
+/* Select all fields from “Customers” where country is "Germany" AND city is "Berlin" */
+SELECT * 
+FROM customers
+WHERE Country = "Germany" AND City = "Berlin";
 
-
+/* Select all fields from "Customers" where city is "Cape Town" OR "Durban". */
+SELECT * 
+FROM customers
+WHERE City = "Cape Town" OR City = "Durban";
 
 
 
